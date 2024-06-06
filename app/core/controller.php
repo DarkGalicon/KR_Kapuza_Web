@@ -1,3 +1,4 @@
+<?php
 class Controller {
     
     public $model;
@@ -5,7 +6,7 @@ class Controller {
 
     function __contstuct()
     {
-        $this->view = new View()
+        $this->view = new View();
     }
 
     function action_index()
@@ -14,3 +15,4 @@ class Controller {
     }
 
 }
+?>

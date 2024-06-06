@@ -1,10 +1,11 @@
+<?php
 class Route
 {
     static function start()
     {
         //контролер и действие по умолчанию
         $controller_name = 'Main';
-        $action_name = 'index'
+        $action_name = 'index';
 
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
@@ -53,7 +54,7 @@ class Route
 		$action = $action_name;
 		
 		if(method_exists($controller, $action))
-		{s
+		{
 			// вызываем действие контроллера
 			$controller->$action();
 		}
@@ -72,3 +73,4 @@ class Route
 		header('Location:'.$host.'404');
     }
 }
+?>
