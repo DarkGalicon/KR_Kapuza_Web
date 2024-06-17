@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const arrayRouter = require("./app/routes/arrayRouter.js");
-const homeRouter = require("./app/routes/homeRouter.js");
+const arrayRouter = require("./routes/arrayRouter.js");
+const homeRouter = require("./routes/homeRouter.js");
 
 app.set("view engine", "hbs");
 app.use(express.urlencoded({ extended: false}));
