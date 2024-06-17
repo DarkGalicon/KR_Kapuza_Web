@@ -1,13 +1,16 @@
 const express = require("express");
 const app = express();
-const arrayRouter = require("./routes/arrayRouter.js");
+const arrayRouter = require("./r");
 const homeRouter = require("./routes/homeRouter.js");
- 
-app.use("/users", arrayRouter);
+
+app.set("view engine", "hbs");
+app.use(express.urlencoded({ extended: false}));
+
+app.use("/arrays", arrayRouter);
 app.use("/", homeRouter);
 
 app.use(function(req, res, next) {
     res.status(404).send("Not Found");
 })
 
-app.listen(80, ()=>console.log("Сервер запущен и ожидает подключения..."));
+app.listen(3000, ()=>console.log("Сервер запущен и ожидает подключения..."));

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список массивов</title>
+    <meta charset="uft-8"/>
+</head>
+<body>
+    <a href="/array/create">Создать массив</a>
+    <h1>Списко массивов</h1>
+     <table>
+        <tr><th>Число 1</th><th>Число 2</th><th>Число 3</th></tr>
+        {{#each arrays}}
+            <tr><th>{{this.num1}}</th><th>{{this.num2}}</th><th>{{this.num3}}</th></tr>
+        {{/each}}    
+     </table>
+</body>
+</html>
