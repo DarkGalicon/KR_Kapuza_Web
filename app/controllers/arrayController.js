@@ -1,10 +1,10 @@
 const Array = require("../models/array.js");
 
 exports.addArray = function(request, response){
-    response.render("create.hbs");
+    response.render("../views/create.hbs");
 };
 exports.operationsArray = function(request, response){
-    response.render("arrays.hbs", {
+    response.render("../views/arrays.hbs", {
         arrays: Array.getAll()
     });
 };
