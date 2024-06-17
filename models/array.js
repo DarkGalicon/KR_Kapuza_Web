@@ -7,10 +7,12 @@ module.exports = class Array{
         this.num2 = num2
         this.num3 = num3
     }
+
     save(){
-        arrays.push(this);
+        this.push(arrays)
     }
+
     static getAll(){
         return arrays;
-    }
+    };
 }

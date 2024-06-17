@@ -5,7 +5,7 @@ exports.addArray = function(request, response){
 }
 exports.operationsArray = function(request, response){
     response.render("arrays.hbs", {
-        arrays: Array.getAll()
+        arrays: Array.getAll
     });
 };
 exports.postArray = function(request, response){
@@ -13,6 +13,6 @@ exports.postArray = function(request, response){
     const arraynum2 = request.body.num2
     const arraynum3 = request.body.num3
     const array = new Array(arraynum1, arraynum2, arraynum3);
-    Array.save();
+    array.save;
     response.redirect("/arrays");
 };
